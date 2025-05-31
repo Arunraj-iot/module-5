@@ -11,10 +11,12 @@ To write a C Program to find area of rectangle using pointer.
 
 ## PROGRAM
 ~~~
+
 #include <stdio.h>
 
 int main() {
     int x, y, area;
+    int *ptr1 = &x;
     int *ptr = &y;
 
     printf("Enter the length of the rectangle: ");
@@ -23,11 +25,12 @@ int main() {
     printf("Enter the breadth of the rectangle: ");
     scanf("%d", &y);
 
-    area = x * (*ptr);
+    area = (*ptr1) * (*ptr);
 
     printf("Area of the rectangle: %d\n", area);
 
     return 0;
+
 }
 ~~~
 
